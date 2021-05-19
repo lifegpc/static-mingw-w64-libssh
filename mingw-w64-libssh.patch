@@ -1,5 +1,5 @@
 diff --git a/mingw-w64-libssh/PKGBUILD b/mingw-w64-libssh/PKGBUILD
-index ab9baea02..bee11211d 100644
+index ab9baea02..a6bac8eda 100644
 --- a/mingw-w64-libssh/PKGBUILD
 +++ b/mingw-w64-libssh/PKGBUILD
 @@ -60,7 +60,8 @@ build() {
@@ -7,7 +7,7 @@ index ab9baea02..bee11211d 100644
      -DUNIT_TESTING=ON \
      -DBUILD_STATIC_LIB=ON \
 -    -DBUILD_SHARED_LIBS=ON \
-+    -DWITH_STATIC_LIB=ON \
++    -DCMAKE_C_FLAGS=-DLIBSSH_STATIC
 +    -DBUILD_SHARED_LIBS=OFF \
      ../${_realname}-${pkgver}
  
