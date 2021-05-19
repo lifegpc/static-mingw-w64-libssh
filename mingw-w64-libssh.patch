@@ -1,12 +1,13 @@
 diff --git a/mingw-w64-libssh/PKGBUILD b/mingw-w64-libssh/PKGBUILD
-index ab9baea02..32a6fc678 100644
+index ab9baea02..bee11211d 100644
 --- a/mingw-w64-libssh/PKGBUILD
 +++ b/mingw-w64-libssh/PKGBUILD
-@@ -60,7 +60,7 @@ build() {
+@@ -60,7 +60,8 @@ build() {
      -DWITH_GSSAPI=OFF \
      -DUNIT_TESTING=ON \
      -DBUILD_STATIC_LIB=ON \
 -    -DBUILD_SHARED_LIBS=ON \
++    -DWITH_STATIC_LIB=ON \
 +    -DBUILD_SHARED_LIBS=OFF \
      ../${_realname}-${pkgver}
  
