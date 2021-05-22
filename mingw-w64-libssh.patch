@@ -1,16 +1,16 @@
 diff --git a/mingw-w64-libssh/PKGBUILD b/mingw-w64-libssh/PKGBUILD
-index ab9baea02..3b8a6e782 100644
+index ab9baea02..ab219356e 100644
 --- a/mingw-w64-libssh/PKGBUILD
 +++ b/mingw-w64-libssh/PKGBUILD
-@@ -60,7 +60,11 @@ build() {
+@@ -58,9 +58,10 @@ build() {
+     -DCMAKE_INSTALL_PREFIX=${MINGW_PREFIX} \
+     ${extra_config} \
      -DWITH_GSSAPI=OFF \
-     -DUNIT_TESTING=ON \
+-    -DUNIT_TESTING=ON \
++    -DUNIT_TESTING=OFF \
      -DBUILD_STATIC_LIB=ON \
 -    -DBUILD_SHARED_LIBS=ON \
-+    -DCMAKE_C_FLAGS=-DLIBSSH_STATIC \
 +    -DWITH_EXAMPLES=OFF \
-+    -DPKG_CONFIG_EXECUTABLE="pkg-config --static" \
-+    -DCMAKE_STATIC_LINKER_FLAGS="-static" \
 +    -DBUILD_SHARED_LIBS=OFF \
      ../${_realname}-${pkgver}
  
