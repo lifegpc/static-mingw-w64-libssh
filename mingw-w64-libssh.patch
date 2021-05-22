@@ -1,8 +1,8 @@
 diff --git a/mingw-w64-libssh/PKGBUILD b/mingw-w64-libssh/PKGBUILD
-index ab9baea02..ab219356e 100644
+index ab9baea02..70196497f 100644
 --- a/mingw-w64-libssh/PKGBUILD
 +++ b/mingw-w64-libssh/PKGBUILD
-@@ -58,9 +58,10 @@ build() {
+@@ -58,19 +58,15 @@ build() {
      -DCMAKE_INSTALL_PREFIX=${MINGW_PREFIX} \
      ${extra_config} \
      -DWITH_GSSAPI=OFF \
@@ -15,3 +15,13 @@ index ab9baea02..ab219356e 100644
      ../${_realname}-${pkgver}
  
    make all
+ }
+ 
+-check() {
+-  cd "${srcdir}/build-${MINGW_CHOST}"
+-  make test
+-}
+-
+ package() {
+   cd "${srcdir}/build-${MINGW_CHOST}"
+   make DESTDIR=${pkgdir} install
